@@ -1,5 +1,4 @@
 #include <stdio.h>
-#include <stdlib.h>
 
 #define FALSE 0
 #define LIMIT_FOL 5
@@ -34,11 +33,8 @@ int main(){
 			num_cor = num;
 		}
                 break;
-        }
-        if (folus == LIMIT_FOL){
-                printf("Превышен лимит некорректных вводов\n");
-                return 0;
-        }
+	}
+
 	//Перевод и вывод
 	ten_in_oct(num_cor);
 	printf("\n");
