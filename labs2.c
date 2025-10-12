@@ -5,11 +5,14 @@
 #define BASE_SYS 8
 
 
-int ten_in_oct(long int n){
-	if (n == 0)
-		return 0;
-	ten_in_oct(n / BASE_SYS);
-	printf("%li", n % BASE_SYS);
+void ten_in_oct(long int n){
+	if (n == 0){
+		;
+	}
+	else {
+		ten_in_oct(n / BASE_SYS);
+		printf("%li", n % BASE_SYS);
+	}
 }
 
 int main(){
