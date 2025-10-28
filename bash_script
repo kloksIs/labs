@@ -1,0 +1,26 @@
+#!/bin/bash
+
+found_repeat(){
+	for arg_check in $2
+	do
+		if [ $arg_check == $1 ]; then
+	                echo 1
+			exit
+
+		fi
+	done
+	echo 0
+
+}
+
+for arg in $@
+do
+	shift
+	result=$(found_repeat $arg $@)
+	if [ $result == 1 ]; then
+                echo "В массиве есть дубликаты"
+                exit 0
+        fi
+
+done
+echo "В массиве нет дубликатов"
