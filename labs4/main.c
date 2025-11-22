@@ -1,7 +1,7 @@
 #include <stdio.h>
 #include <string.h>
 #include <time.h>
-#include "head.h"
+#include "func.h"
 #define NUMARRAY 4
 #define LEN1 10
 #define LEN2 1000
@@ -48,7 +48,7 @@ long double get_time_sort(int *array, int size, void (*sort_type)(int*, int)){
 }
 
 void get_tabl(struct data *res, int size){
-    char str[45];
+    char str[44];
     int length = sizeof(str) - 1;
     memset(str, '-', length);
     str[length] = '\0';
